@@ -18,7 +18,6 @@ const PaginationRounded = (props) => {
   const classes = useStyles();
 
   const switchPage = (e, value) => {
-    // console.log({ e, value });
     MovieStore.switchPage(value);
     props.history.push(`/page=${MovieStore.pagination.currentPage}`);
   };

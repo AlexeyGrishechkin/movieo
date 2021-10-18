@@ -20,10 +20,11 @@ const CustomLoader = styled.div`
     height: 164px;
     margin: 8px;
     border-radius: 50%;
-    border: 6px solid black;
+    border: 6px solid;
     border-color: black transparent black transparent;
     animation: lds-dual-ring 1.2s linear infinite;
   }
+
   @keyframes lds-dual-ring {
     0% {
       transform: rotate(0deg);

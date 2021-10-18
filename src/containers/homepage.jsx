@@ -1,20 +1,16 @@
 import React, { useEffect } from "react";
-import { Genre, Movie, MovieName, Movies, Poster } from "../styled";
-import { IMG_URL } from "../utils/constants";
 import { inject, observer } from "mobx-react";
-import moment from "moment";
-import { RatingFilm } from "../components/raitingFilm";
-import PaginationRounded from "../components/pagination";
 import { useLocation } from "react-router-dom";
+import { Movie, MovieName, Movies, Poster } from "../styled";
+import PaginationRounded from "../components/pagination";
 import { Loader } from "../components/loader";
+import RenderGenres from "../components/renderGenres";
+import { RatingFilm } from "../components/raitingFilm";
+import { IMG_URL } from "../utils/constants";
 
 const Homepage = (props) => {
   const { MovieStore, history } = props;
   const { pathname } = useLocation();
-
-  useEffect(() => {
-    MovieStore.getGenresList();
-  }, []);
 
   useEffect(() => {
     MovieStore.getAllMovies();
@@ -33,24 +29,14 @@ const Homepage = (props) => {
           <div>
             <RatingFilm rating={movie.vote_average} />
             <MovieName>{movie.title}</MovieName>
-            {renderGenres(movie.release_date, movie.genre_ids)}
+            <RenderGenres
+              releaseDate={movie.release_date}
+              hasGenre={movie.genre_ids}
+            />
           </div>
         </Movie>
       );
     });
-  };
-
-  const renderGenres = (releaseDate, hasGenre) => {
-    const genreList = MovieStore.genres
-      .filter((genre) => hasGenre.indexOf(genre.id) !== -1)
-      .map((genre) => genre.name)
-      .join(", ");
-
-    return (
-      <Genre>
-        {moment(releaseDate).format("YYYY")} - {genreList}
-      </Genre>
-    );
   };
 
   return (

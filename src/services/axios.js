@@ -1,5 +1,5 @@
 import axios from "axios";
-import { API_KEY, BASE_URL } from "./constants";
+import { BASE_URL } from "../utils/constants";
 
 const api = axios.create({
   baseURL: BASE_URL,
@@ -7,10 +7,10 @@ const api = axios.create({
 
 api.interceptors.request.use((config) => {
   config.params = {
-    // page: 1,
-    api_key: API_KEY,
+    api_key: process.env.REACT_APP_API_KEY,
     ...config.params,
   };
+
   return config;
 });
 

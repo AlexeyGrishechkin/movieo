@@ -2,8 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Pagination from "@material-ui/lab/Pagination";
 import { inject, observer } from "mobx-react";
-import { PaginationWrap } from "../styled";
 import { withRouter } from "react-router-dom";
+import { PaginationWrap } from "../styled";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,7 +17,7 @@ const PaginationRounded = (props) => {
   const { MovieStore } = props;
   const classes = useStyles();
 
-  const switchPage = (e, value) => {
+  const switchPage = (event, value) => {
     MovieStore.switchPage(value);
     props.history.push(`/page=${MovieStore.pagination.currentPage}`);
   };

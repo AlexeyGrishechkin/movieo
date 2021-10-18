@@ -8,6 +8,7 @@ const HeaderComponent = (props) => {
   const goToHomePage = () => {
     history.goBack();
   };
+
   return <Header onClick={goToHomePage}>Movio</Header>;
 };
 

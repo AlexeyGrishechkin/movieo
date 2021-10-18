@@ -18,7 +18,7 @@ class MovieStore {
 
   pagination = {
     totalPages: null,
-    currentPage: 1,
+    currentPage: sessionStorage.getItem("currentPage") || 1,
   };
 
   movies = [];
@@ -35,6 +35,7 @@ class MovieStore {
 
   getAllMovies = () => {
     this.loading.loadingMovies = true;
+
     return API_SERVICE.getMovies(this.pagination.currentPage)
       .then(({ data }) => {
         this.movies = data.results;
@@ -47,6 +48,7 @@ class MovieStore {
 
   getGenresList = () => {
     this.loading.loadingGenres = true;
+
     return API_SERVICE.getGenres()
       .then(({ data }) => {
         this.genres = data.genres;
@@ -57,6 +59,7 @@ class MovieStore {
 
   getMovieByID = (id) => {
     this.loading.gettingMovie = true;
+
     return API_SERVICE.getMovieById(id)
       .then(({ data }) => {
         this.movie = data;
@@ -66,6 +69,7 @@ class MovieStore {
   };
 
   switchPage = (page) => {
+    sessionStorage.setItem("currentPage", page);
     this.pagination.currentPage = page;
   };
 }

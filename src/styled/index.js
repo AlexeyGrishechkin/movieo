@@ -4,17 +4,16 @@ import { switchProp } from "styled-tools";
 export const MainWrapper = styled.main`
   width: 100%;
   height: 100%;
-  background: #f4f4f4;
   font-family: Tahoma, sans-serif;
 `;
 
 export const Header = styled.header`
-  padding: 1rem 3rem;
+  padding: 16px 48px;
   display: flex;
   justify-content: flex-start;
   background-color: #1f1f1f;
   color: #ffffff;
-  font-size: 2rem;
+  font-size: 32px;
   cursor: pointer;
 `;
 
@@ -34,7 +33,7 @@ export const Movie = styled.article`
   justify-content: center;
   width: 200px;
   height: 360px;
-  margin: 1rem;
+  margin: 16px;
   border-radius: 3px;
   background-color: var(--secondary-color);
   position: relative;
@@ -63,7 +62,7 @@ export const Rating = styled.div`
   z-index: 5;
   color: #fff;
 
-  ${switchProp("colorRating", {
+  ${switchProp("describeRating", {
     good: css`
       background: #3bb33b;
     `,

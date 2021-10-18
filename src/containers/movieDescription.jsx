@@ -5,7 +5,7 @@ import styled, { css } from "styled-components";
 import moment from "moment";
 import { checkData } from "../utils/helpers/checkData";
 import { switchProp } from "styled-tools";
-import { colorRating } from "../utils/helpers/colorRating";
+import { describeRating } from "../utils/helpers/describeRating";
 import { minuteToHours } from "../utils/helpers/minuteToHours";
 import { expandList } from "../utils/helpers/expandList";
 import { Loader } from "../components/loader";
@@ -88,7 +88,7 @@ const VoteAverage = styled.span`
   font-weight: 500;
   text-align: center;
 
-  ${switchProp("colorRating", {
+  ${switchProp("describeRating", {
     good: css`
       color: #3bb33b;
     `,
@@ -96,6 +96,9 @@ const VoteAverage = styled.span`
       color: #f00;
     `,
     normal: css`
+      color: #aaa;
+    `,
+    unknown: css`
       color: #aaa;
     `,
   })}
@@ -109,6 +112,7 @@ const GoBackBtn = styled.button`
   color: grey;
   border-radius: 8px;
   margin-bottom: 20px;
+  cursor: pointer;
 `;
 
 const MovieDescription = (props) => {
@@ -120,6 +124,7 @@ const MovieDescription = (props) => {
 
   useEffect(() => {
     const { MovieStore } = props;
+
     MovieStore.getMovieByID(params.name);
   }, []);
 
@@ -179,7 +184,7 @@ const MovieDescription = (props) => {
             <span>{movie.overview}</span>
           </InformationCol>
           <EmptyZone />
-          <VoteAverage colorRating={colorRating(movie.vote_average)}>
+          <VoteAverage describeRating={describeRating(movie.vote_average)}>
             <GoBackBtn onClick={goBack}>Back to menu</GoBackBtn>
             {movie.vote_average ? (
               <>
@@ -195,4 +200,5 @@ const MovieDescription = (props) => {
     </MovieWrapper>
   );
 };
+
 export default inject("MovieStore")(observer(MovieDescription));

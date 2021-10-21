@@ -35,7 +35,7 @@ const Homepage = (props) => {
             <MovieName>{movie.title}</MovieName>
             <RenderGenres
               releaseDate={movie.release_date}
-              hasGenre={movie.genre_ids}
+              filmGenres={movie.genre_ids}
             />
           </div>
         </Movie>

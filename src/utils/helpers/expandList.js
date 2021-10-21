@@ -1,3 +1,2 @@
-export const expandList = (list = []) => {
-  return list.map((item) => item.name).join(", ");
-};
+export const expandList = (list = []) => list.map((item) => item.name).join(", ");
+

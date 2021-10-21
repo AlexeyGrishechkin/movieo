@@ -14,12 +14,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const PaginationRounded = (props) => {
-  const { MovieStore } = props;
+  const { MovieStore, history } = props;
   const classes = useStyles();
 
   const switchPage = (event, value) => {
     MovieStore.switchPage(value);
-    props.history.push(`/page=${MovieStore.pagination.currentPage}`);
+    history.push(`/page=${MovieStore.pagination.currentPage}`);
   };
 
   return (

@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
-import { IMG_URL } from "../utils/constants";
 import { inject, observer } from "mobx-react";
-import styled, { css } from "styled-components";
 import moment from "moment";
-import { checkData } from "../utils/helpers/checkData";
+import styled, { css } from "styled-components";
 import { switchProp } from "styled-tools";
 import { describeRating } from "../utils/helpers/describeRating";
 import { minuteToHours } from "../utils/helpers/minuteToHours";
 import { expandList } from "../utils/helpers/expandList";
 import { Loader } from "../components/loader";
+import { IMG_URL } from "../utils/constants";
+import { checkData } from "../utils/helpers/checkData";
 
 const MovieWrapper = styled.main`
   padding: 40px 0 60px;

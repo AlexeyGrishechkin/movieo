@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { inject, observer } from "mobx-react";
-import { useLocation } from "react-router-dom";
 import { Movie, MovieName, Movies, Poster } from "../styled";
 import PaginationRounded from "../components/pagination";
 import { Loader } from "../components/loader";
@@ -10,12 +9,17 @@ import { IMG_URL } from "../utils/constants";
 
 const Homepage = (props) => {
   const { MovieStore, history } = props;
-  const { pathname } = useLocation();
+  const urlPage = history.location.pathname.split("=")[1];
 
   useEffect(() => {
+    MovieStore.getGenresList();
+  }, []);
+
+  useEffect(() => {
+    MovieStore.switchPage(urlPage);
     MovieStore.getAllMovies();
     MovieStore.movies && window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [history.location.pathname]);
 
   const renderMovie = () => {
     return MovieStore.movies.map((movie) => {

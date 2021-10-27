@@ -4,7 +4,7 @@ import { describeRating } from "../utils/helpers/describeRating";
 
 export const RatingFilm = ({ rating }) => {
   if (rating === 0) {
-    return false;
+    return null;
   }
 
   return (

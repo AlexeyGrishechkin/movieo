@@ -1,3 +1,8 @@
-# MOVIEO
+# MOVIO
 
-init project
+### Project set up
+
+```sh
+npm run prepare
+npm install
+```

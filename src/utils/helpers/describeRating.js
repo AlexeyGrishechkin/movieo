@@ -1,13 +1,19 @@
 export const describeRating = (rating) => {
-  if (rating === 0 || !rating) {
+  const convertRatingToNumber = Number(rating);
+
+  if (
+    convertRatingToNumber === 0 ||
+    !convertRatingToNumber ||
+    typeof convertRatingToNumber !== "number"
+  ) {
     return "unknown";
   }
 
-  if (rating < 5) {
+  if (convertRatingToNumber < 5) {
     return "bad";
   }
 
-  if (rating > 7) {
+  if (convertRatingToNumber > 7) {
     return "good";
   }
 

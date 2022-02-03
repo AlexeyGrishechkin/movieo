@@ -1,6 +1,11 @@
 export const createGenreList = (genreList, filmGenres) => {
-  return genreList
-    .filter((genre) => filmGenres.indexOf(genre.id) !== -1)
-    .map((genre) => genre.name)
-    .join(", ");
+  const findGenresInGenresList = genreList.filter(
+    (genre) => filmGenres.indexOf(genre.id) !== -1
+  );
+
+  if (findGenresInGenresList.length === 0) {
+    return "sorry, no genre data for this film";
+  }
+
+  return findGenresInGenresList.map((genre) => genre.name).join(", ");
 };

@@ -1,13 +1,13 @@
 import { checkData } from "../checkData";
 
-describe("checkData gets two parameters and returns these joined parameters as string", () => {
-  test("get data and description", () => {
+describe("checkData", () => {
+  test("checkData givens 2 parameters - returns containing these parameters as string", () => {
     expect(checkData(30000, "$")).toBe("30000 $");
   });
-  test("get only one parameter and return string", () => {
+  test("given only 1 parameter - returns string containing this parameter", () => {
     expect(checkData(100)).toBe("100 ");
   });
-  test("get nothing and return dash", () => {
+  test("given nothing - return dash", () => {
     expect(checkData()).toBe("-");
   });
 });

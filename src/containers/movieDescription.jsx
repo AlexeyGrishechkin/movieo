@@ -5,7 +5,7 @@ import styled, { css } from "styled-components";
 import { switchProp } from "styled-tools";
 import { describeRating } from "../utils/helpers/describeRating";
 import { minuteToHours } from "../utils/helpers/minuteToHours";
-import { expandList } from "../utils/helpers/expandList";
+import { getNameFromList } from "../utils/helpers/getNameFromList";
 import { Loader } from "../components/loader";
 import { IMG_URL } from "../utils/constants";
 import { checkData } from "../utils/helpers/checkData";
@@ -155,11 +155,11 @@ const MovieDescription = (props) => {
             </Info>
             <Info>
               <Text>Country</Text>
-              {expandList(movie.production_countries)}
+              {getNameFromList(movie.production_countries)}
             </Info>
             <Info>
               <Text>Genres</Text>
-              {expandList(movie.genres)}
+              {getNameFromList(movie.genres)}
             </Info>
             <Info>
               <Text>Original title</Text>

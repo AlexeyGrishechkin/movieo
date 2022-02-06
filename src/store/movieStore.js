@@ -1,5 +1,6 @@
 import { action, observable, makeObservable } from "mobx";
 import { API_SERVICE } from "../services/api";
+import { MAX_TOTAL_PAGE } from "../utils/constants";
 
 class MovieStore {
   constructor() {
@@ -39,7 +40,10 @@ class MovieStore {
     return API_SERVICE.getMovies(this.pagination.currentPage)
       .then(({ data }) => {
         this.movies = data.results;
-        this.pagination.totalPages = data.total_pages;
+        this.pagination.totalPages =
+          data.total_pages >= MAX_TOTAL_PAGE
+            ? MAX_TOTAL_PAGE
+            : data.total_pages;
         this.pagination.currentPage = data.page;
       })
       .catch((err) => console.log(err))

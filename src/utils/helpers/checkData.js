@@ -1,4 +1,4 @@
-export const checkData = (data, rest) => {
+export const checkData = (data, rest = "") => {
   if (!data) {
     return "-";
   }

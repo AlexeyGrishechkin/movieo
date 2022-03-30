@@ -50,7 +50,7 @@ const Homepage = (props) => {
       ) : (
         <>
           <Movies>{renderMovie()}</Movies>
-          <PaginationRounded totalPage={MovieStore.totalPages} />
+          <PaginationRounded />
         </>
       )}
     </>

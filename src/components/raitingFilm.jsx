@@ -8,6 +8,6 @@ export const RatingFilm = ({ rating }) => {
   }
 
   return (
-    <Rating describeRating={describeRating(rating)}>{rating.toFixed(1)}</Rating>
+    <Rating data-testid="rating-film" describeRating={describeRating(rating)}>{rating.toFixed(1)}</Rating>
   );
 };

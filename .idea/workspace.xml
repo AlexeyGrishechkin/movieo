@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ac97c127-b16d-41ef-bef2-13c83d30e596" name="Default Changelist" comment="feature/homepage - add helpers">
+      <change afterPath="$PROJECT_DIR$/src/components/tests/pagination.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/tests/ratingFilm.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pagination.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/raitingFilm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/raitingFilm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/homepage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/homepage.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/movie_details" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1xuEBpk08YpNfiY12VoTvPqKMpM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.1.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\git\movio" />
+      <recent name="C:\git\movio\src\components\tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.test">
+    <configuration name="prepare" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prepare" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <package-manager value="npm" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.test" />
+        <item itemvalue="npm.prepare" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="feature/homepage - add homepage">
+      <created>1631196234600</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1631196234600</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac97c127-b16d-41ef-bef2-13c83d30e596" name="Default Changelist" comment="feature/homepage - create store" />
+      <created>1631196447110</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1631196447110</updated>
+      <workItem from="1631196447701" duration="626000" />
+      <workItem from="1631197218223" duration="1155000" />
+      <workItem from="1643821692198" duration="1121000" />
+      <workItem from="1643878033835" duration="124000" />
+      <workItem from="1648659741124" duration="1681000" />
+      <workItem from="1648661592976" duration="1772000" />
+      <workItem from="1648663461405" duration="1203000" />
+    </task>
+    <task id="LOCAL-00002" summary="feature/homepage - added helpers">
+      <created>1631197068306</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1631197068306</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feature/homepage - add helpers">
+      <created>1631197280391</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1631197280391</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feature/movie_details - add movie details page">
+      <created>1631197800225</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1631197800225</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feature/homepage - remove console.log">
+      <created>1631197899250</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1631197899250</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feature/homepage - add homepage" />
+    <MESSAGE value="feature/homepage - added helpers" />
+    <MESSAGE value="feature/homepage - add helpers" />
+    <MESSAGE value="feature/movie_details - add movie details page" />
+    <MESSAGE value="feature/homepage - remove console.log" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature/homepage - remove console.log" />
+  </component>
+</project>
